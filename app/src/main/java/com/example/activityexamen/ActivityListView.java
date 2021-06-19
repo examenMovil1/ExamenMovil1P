@@ -41,12 +41,14 @@ public class ActivityListView extends AppCompatActivity {
         id = (EditText) findViewById(R.id.txtcid);
         Button btnregresar = (Button)findViewById(R.id.btnregresar);
 
+
+
         Button btneliminar = (Button)findViewById(R.id.btneliminar);
 
         btneliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eliminar();
+
 
             }
         });
@@ -84,16 +86,6 @@ public class ActivityListView extends AppCompatActivity {
         });
 
     }
-
-    private void eliminar() {
-        SQLiteDatabase db = conexion.getWritableDatabase();
-        String []  params = {id.getText().toString()};
-        String wherecond = Transacciones.id + "=?";
-        db.delete(Transacciones.tablacontactos, wherecond, params);
-        Toast.makeText(getApplicationContext(),"Dato eliminado", Toast.LENGTH_LONG).show();
-
-    }
-
 
 
     private void ObtenerListaContactos() {
