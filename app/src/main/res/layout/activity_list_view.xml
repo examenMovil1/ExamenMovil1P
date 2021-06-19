@@ -24,7 +24,8 @@
     <ListView
         android:id="@+id/listaContactos"
         android:layout_width="match_parent"
-        android:layout_height="371dp" />
+        android:layout_height="371dp"
+        android:choiceMode="singleChoice"/>
 
     <Button
         android:id="@+id/button6"

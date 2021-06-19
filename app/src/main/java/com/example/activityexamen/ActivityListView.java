@@ -59,7 +59,6 @@ public class ActivityListView extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
 
-
             }
         });
 
