@@ -40,25 +40,40 @@ public class ActivityListView extends AppCompatActivity {
         conexion= new SQLiteConexion(this, Transacciones.NameDataBase, null, 1);
         listacontactos= (ListView) findViewById(R.id.listaContactos);
         id = (EditText) findViewById(R.id.txtcid);
+
         Button btnregresar = (Button)findViewById(R.id.btnregresar);
-
-
-
         Button btneliminar = (Button)findViewById(R.id.btneliminar);
+        Button btnactualizar = (Button)findViewById(R.id.btnactualizar);
+        Button btnllamar = (Button)findViewById(R.id.btnllamar);
 
-        btneliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
 
         btnregresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnllamar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               //llamar();
+            }
+        });
+
+        btneliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //eliminar();
+
+            }
+        });
+
+        btnactualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //actualizar();
 
             }
         });
@@ -79,6 +94,8 @@ public class ActivityListView extends AppCompatActivity {
                 selec2.setSelected(true);
             }
         });
+
+
 
         id.addTextChangedListener(new TextWatcher() {
             @Override
