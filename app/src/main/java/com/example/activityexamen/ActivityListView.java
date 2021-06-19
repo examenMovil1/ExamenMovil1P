@@ -118,7 +118,7 @@ public class ActivityListView extends AppCompatActivity {
                         selec2.setSelected(true);
 
                         AlertDialog.Builder builder= new AlertDialog.Builder(ActivityListView.this);
-                        builder.setMessage("Quiere realizar una llamada");
+                        builder.setMessage("¿Quiere realizar una llamada?");
                         builder.setTitle("LLAMADA");
 
                         builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
@@ -139,7 +139,7 @@ public class ActivityListView extends AppCompatActivity {
                         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Toast.makeText(ActivityListView.this,"que bueno que no", Toast.LENGTH_LONG).show();
+                                Toast.makeText(ActivityListView.this,"LLamada no realizada", Toast.LENGTH_LONG).show();
 
                             }
                         });
