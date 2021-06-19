@@ -97,9 +97,57 @@ public class ActivityListView extends AppCompatActivity {
                 SelectedRow = true;
 
 
-               //BTNELIMINAR
+                btneliminar.setOnClickListener(new View.OnClickListener() {
+                    @Override
 
-                //btnllamarAqui
+                    public void onClick(View v) {
+
+                        selec2.setSelected(true);
+                        SQLiteDatabase db = conexion.getWritableDatabase();
+                        String sql = "DELETE FROM contactos WHERE id="+lista.get(posicion).getId();
+                        db.execSQL(sql);
+                        Intent i = new Intent(ActivityListView.this, ActivityListView.class);
+                        startActivity(i);
+                        finish();
+                    }
+                });
+
+                btnllamar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        selec2.setSelected(true);
+
+                        AlertDialog.Builder builder= new AlertDialog.Builder(ActivityListView.this);
+                        builder.setMessage("Quiere realizar una llamada");
+                        builder.setTitle("LLAMADA");
+
+                        builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                mostrarnumero();
+
+                                /*Intent t = new Intent(Intent.ACTION_CALL, Uri.parse("tel:96603565"));
+                                if (ActivityCompat.checkSelfPermission(ActivityListView.this, Manifest.permission.CALL_PHONE)!=
+                                        PackageManager.PERMISSION_GRANTED)
+                                    return;
+                                startActivity(t);*/
+
+                            }
+                        });
+
+                        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Toast.makeText(ActivityListView.this,"que bueno que no", Toast.LENGTH_LONG).show();
+
+                            }
+                        });
+
+                        AlertDialog dialog= builder.create();
+                        dialog.show();
+                    }
+                });
 
 
             }

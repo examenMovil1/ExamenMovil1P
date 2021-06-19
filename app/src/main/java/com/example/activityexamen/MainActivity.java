@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         valores.put(Transacciones.telefono,cpaisesn + telefono.getText().toString());
         valores.put(Transacciones.nota, nota.getText().toString());
 
+
         Long resultado = db.insert(Transacciones.tablacontactos, Transacciones.id, valores);
         Toast.makeText(getApplicationContext(), "Registro Ingresado:" + resultado.toString(),Toast.LENGTH_LONG).show();
 
