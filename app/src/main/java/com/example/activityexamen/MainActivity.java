@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         String nt= nota.getText().toString();
 
         if(nom.isEmpty()){
-            nombre.setError("Campo nombre no puede quedar vacio");
+            nombre.setError("LOS CAMPOS NO PUEDEN QUEDAR VACIOS");
             retorno = false;
         }
         if(tel.isEmpty()){
