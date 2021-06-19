@@ -63,7 +63,29 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public boolean validar(){
+        boolean retorno= true;
 
+        String nom= nombre.getText().toString();
+        String tel= telefono.getText().toString();
+        String nt= nota.getText().toString();
+
+        if(nom.isEmpty()){
+            nombre.setError("Campo nombre no puede quedar vacio");
+            retorno = false;
+        }
+        if(tel.isEmpty()){
+            telefono.setError("Campo telefono no puede quedar vacio");
+            retorno = false;
+        }
+        if(nt.isEmpty()){
+            nota.setError("Campo nota no puede quedar vacio");
+            retorno = false;
+        }
+
+        return retorno;
+
+    }
 
     public void recortar() {
         paises = comboPais.getSelectedItem().toString();
