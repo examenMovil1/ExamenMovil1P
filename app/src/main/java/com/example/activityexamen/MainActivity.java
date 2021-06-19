@@ -109,14 +109,8 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Registro Ingresado:" + resultado.toString(),Toast.LENGTH_LONG).show();
 
         db.close();
-        ClearScreen();
+
     }
-    private void ClearScreen()
-    {
-        comboPais.setSelection(0);
-        nombre.setText("");
-        telefono.setText("");
-        nota.setText("");
-    }
+
 
 }
