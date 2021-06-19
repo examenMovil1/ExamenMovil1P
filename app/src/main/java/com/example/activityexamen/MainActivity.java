@@ -17,7 +17,7 @@ import com.example.activityexamen.transacciones.Transacciones;
 
 
 public class MainActivity extends AppCompatActivity {
-
+//HOLA QUE TAL
     EditText pais,nombre,telefono,nota;
     Spinner comboPais;
 
