@@ -111,6 +111,13 @@ public class MainActivity extends AppCompatActivity {
         db.close();
 
     }
-
+    private void ClearScreen()
+    {
+        ClearScreen();
+        comboPais.setSelection(0);
+        nombre.setText("");
+        telefono.setText("");
+        nota.setText("");
+    }
 
 }
