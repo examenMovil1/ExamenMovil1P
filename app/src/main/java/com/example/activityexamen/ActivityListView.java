@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,8 +67,18 @@ public class ActivityListView extends AppCompatActivity {
 
         ObtenerListaContactos();
 
-        ArrayAdapter adp = new ArrayAdapter(this, android.R.layout.simple_list_item_1, ArregloContactos);
+
+        ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, ArregloContactos);
         listacontactos.setAdapter(adp);
+
+
+        listacontactos.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        listacontactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick (AdapterView<?> sele1, View selec2, int posicion, long select3){
+                selec2.setSelected(true);
+            }
+        });
 
         id.addTextChangedListener(new TextWatcher() {
             @Override
