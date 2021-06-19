@@ -97,22 +97,10 @@ public class ActivityListView extends AppCompatActivity {
                 SelectedRow = true;
 
 
-                btneliminar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-
-                    public void onClick(View v) {
-
-                        selec2.setSelected(true);
-                        SQLiteDatabase db = conexion.getWritableDatabase();
-                        String sql = "DELETE FROM contactos WHERE id="+lista.get(posicion).getId();
-                        db.execSQL(sql);
-                        Intent i = new Intent(ActivityListView.this, ActivityListView.class);
-                        startActivity(i);
-                        finish();
-                    }
-                });
+               //BTNELIMINAR
 
                 //btnllamarAqui
+
 
             }
         });
