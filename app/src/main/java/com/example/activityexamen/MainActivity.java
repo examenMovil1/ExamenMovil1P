@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(validar()){
                     AgregarContacto();
+                    ClearScreen();
                 }
 
             }
@@ -84,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return retorno;
-
     }
+
     public void recortar() {
         paises = comboPais.getSelectedItem().toString();
         cptxt = paises.substring(0, paises.length() - 5);
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void ClearScreen()
     {
-        ClearScreen();
+
         comboPais.setSelection(0);
         nombre.setText("");
         telefono.setText("");
